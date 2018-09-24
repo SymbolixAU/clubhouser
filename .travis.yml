@@ -1,6 +1,0 @@
-language: r
-cache: packages
-r:
-  - devel
-after_success:
-  - Rscript -e 'library(covr); codecov()'
