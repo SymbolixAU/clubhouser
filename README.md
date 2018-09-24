@@ -5,7 +5,7 @@ clubhouser
 
 A simple API wrapper library for accessing the <https://clubhouse.io/> API.
 
-By default, the package returns queries from the V2 api - full documentation can be found here <https://api.clubhouse.io/api/v2>.
+By default, the package returns queries from the V2 API - full documentation can be found here <https://api.clubhouse.io/api/v2>.
 
 Installing
 ----------
@@ -21,13 +21,13 @@ The pre-release version of the package can be pulled from GitHub using the [devt
 What else do I need?
 --------------------
 
-You need an access token to retreive and put records into Clubhouse.
+You need an access token to retrieve and put records into Clubhouse.
 
 If you / your team has a Clubhouse account, bring up the Settings menu (top right) and select "API tokens" from the list on the left.
 
 !["api token"](man/figures/clubhouse_api_token.png)
 
-Download and save it somewhere safe. I recommend adding it to your .Rprofile and retreiving it with `Sys.getenv("CH_TOKEN")`
+Download and save it somewhere safe. I recommend adding it to your .Rprofile and retrieving it with `Sys.getenv("CH_TOKEN")`
 
 If your team doesn't use Clubhouse.....I can't help you. If you are an agile team it's worth a look - it's more structured than Trello and much more user friendly than Jira. And, no they haven't given me any money (though, if someone is offering....)
 
@@ -36,7 +36,7 @@ Setting up
 
 ### Telling `clubhouser` about your API token
 
-You can send your token as an argument to the API functions. If you are a little -lazy- efficient you can also use one of the package's convenience functions to set it once for all subsequent API calls to use.
+You can send your token as an argument to the API functions. If you are a little ~~lazy~~ efficient you can also use one of the package's convenience functions to set it once for all subsequent API calls to use.
 
 To set:
 
@@ -45,7 +45,7 @@ To set:
 set_token("mysecrettoken")
 ```
 
-To retreive your token (if needed):
+To retrieve your token (if needed):
 
 ``` r
 
@@ -54,7 +54,7 @@ get_token()
 
 ### Changing the API version
 
-By default, the package returns queries from the V2 api but you can override this on a function-by-function basis by setting the `url` parameter. You can also change the default. For example, if you want to be brave and use the latest, beta version you would:
+By default, the package returns queries from the V2 API but you can override this on a function-by-function basis by setting the `url` parameter. You can also change the default. For example, if you want to be brave and use the latest, beta version you would:
 
 ``` r
 
@@ -75,7 +75,7 @@ reset_api()
 'GET'ting records
 -----------------
 
-You can list all the records for a single API endpoint (`ch_list_all`), or you can retreive a single record (`ch_get_one`).
+You can list all the records for a single API endpoint (`ch_list_all`), or you can retrieve a single record (`ch_get_one`).
 
 ### `ch_list_all`
 
