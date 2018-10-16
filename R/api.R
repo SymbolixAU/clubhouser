@@ -55,7 +55,8 @@ ua <- function (pkg) paste(pkg, as.character(packageVersion(pkg)), sep="/")
 ch_url <- function (ch_base_url = get_url(),
                     endpoint = NULL,
                     id = NULL,
-                    ch_token = get_token()) {
+                    ch_token = get_token(), 
+                    query = NULL) {
 
   # example :
   # https://api.clubhouse.io/api/v2/teams/{team-public-id}?token=$CLUBHOUSE_API_TOKEN
@@ -63,7 +64,8 @@ ch_url <- function (ch_base_url = get_url(),
   url <- paste0(ch_base_url,
                 if(!is.null(endpoint)){"/"}, endpoint,
                 if(!is.null(id)){"/"}, id,
-                "?token=", ch_token
+                "?token=", ch_token,
+                if(!is.null(query)){"&query="}, query
   )
   return(url)
 }

@@ -60,30 +60,26 @@
 # 
 # length(res)
 # str(res[[1]])
+# # 
+# 
+# library(data.table)
+# endp <- "epics"
+# epic_cols <- c("id", "name", "state", "milestone_id")
+# dt_allepics <- ch_list_all("epics", response_type = "full")[, epic_cols]
+# setDT(dt_allepics)
+# 
+# dt_allepics
 # 
 # 
-# res <- GET(ch_url(endpoint = endpoint, id = 1), config = ch_config() )
-# res <- content(res, as = "text")
-# str(res)
-# str(jsonlite::fromJSON(res))
-# sapply(jsonlite::fromJSON(res), function(x){x[["entity_type"]]})
+# str(res_ep)
 # 
-# jsonlite::fromJSON(res)[["entity_type"]]  
+# # test search
+# endpoint <- "search/stories"
+# id <- NULL
+# query <- "epic:foo"
 # 
-# 
-#   
-#   [,c("entity_type", "id", "name", "description")]})
-# 
-# lapply( jsonlite::toJSON( content(res, as = "text") ), 
-#         function(x){
-#           df <- data.frame(entity_type = x$entity_type,
-#                            id = x$id,
-#                            name = x$name,
-#                            description = x$description) })
-# 
-# resjs <- jsonlite::fromJSON( ch_url(endpoint = endpoint, id = 1) )
-# str(resjs)
-# 
-# 
-# str(res)
-# 
+# test_url <- ch_url(endpoint = endpoint, query = query)
+# res <- clubhouser:::ch_GET(test_url)
+# str(res$data)
+# dt_res <- as.data.table(res$data)
+# dt_res
