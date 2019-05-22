@@ -5,7 +5,7 @@
 \title{Clubhouse url}
 \usage{
 ch_url(ch_base_url = get_url(), endpoint = NULL, id = NULL,
-  ch_token = get_token())
+  ch_token = get_token(), query = NULL)
 }
 \arguments{
 \item{ch_base_url}{the base url. Defaults to V2 of API.}
@@ -15,6 +15,8 @@ ch_url(ch_base_url = get_url(), endpoint = NULL, id = NULL,
 \item{id}{id of single record to be retrieved using \code{ch_get_one} function}
 
 \item{ch_token}{Clubhouse API token.}
+
+\item{query}{optional query search term}
 }
 \description{
 Function to construct urls for Clubhouse api calls

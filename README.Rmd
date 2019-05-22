@@ -85,7 +85,7 @@ set_url(url = "https://clubhouse.io/api/beta")
 
 ```
 
-### Reset deafults
+### Reset defaults
 
 To reset the API settings to their defaults (i.e. clear the stored token and reset to V2 of the API), simply:
 
