@@ -34,16 +34,10 @@ ch_search_stories <- function( query,
 
   # TODO add in checks for url structure
   # TODO add in checks for the query structure??
-<<<<<<< HEAD
   
   if(is.null(url)){ url <- ch_url(endpoint = "search/stories", 
                                   query = query, ch_token = ch_token) }
   
-=======
-
-  if(is.null(url)){ url <- ch_url(endpoint = "search/stories", query = query, ch_token = ch_token) }
-
->>>>>>> 081f1bccdabee8476f675df5d631a7c7ebc2bbff
   # TODO Loop through pages until you hit search_limit
 
   df <- ch_GET(url =  url, config = config)
