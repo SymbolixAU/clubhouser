@@ -45,6 +45,7 @@ ua <- function (pkg) paste(pkg, as.character(packageVersion(pkg)), sep="/")
 #' @param endpoint endpoint to retrieve (e.g. project, team, story)
 #' @param id id of single record to be retrieved using `ch_get_one` function
 #' @param ch_token Clubhouse API token. 
+#' @param query optional query search term
 #' 
 #' 
 #' @details 
@@ -79,8 +80,11 @@ ch_GET <- function (url,
   
   resp <- ch_api("GET", url, config, ...)
 
-  if(length(resp) == 0) warning("Empty list returned. Do you have data at this endpoint?")
-  return( jsonlite::fromJSON( httr::content(resp, as = "text", encoding = "ISO-8859-1") ) )
+  if(length(resp) == 0) warning(
+    "Empty list returned. Do you have data at this endpoint?")
+  return( jsonlite::fromJSON( httr::content(resp
+                                            , as = "text"
+                                            , encoding = "ISO-8859-1") ) )
   
 }
   

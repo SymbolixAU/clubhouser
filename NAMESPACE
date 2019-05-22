@@ -2,6 +2,7 @@
 
 export(ch_get_one)
 export(ch_list_all)
+export(ch_search_stories)
 export(ch_url)
 export(get_token)
 export(get_url)
