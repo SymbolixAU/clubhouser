@@ -3,7 +3,7 @@
 #' @param url Clubhouse API url.  Defaults to API V2
 #' @param endpoint  data to list. One of "categories", "epic-workflow", "epics", 
 #' "files", "labels", "linked-files", "members", "milestones", "projects", 
-#' "repositories", "stories",  "teams", "workflows"
+#' "repositories", "stories",  "teams", "workflows", "iterations"
 #' @param config additional configuration to add to header
 #' @param ch_token Clubhouse API token. 
 #' @param response_type either "full" (all data) or "minimal" (just "entity_type", "id", 
@@ -31,7 +31,7 @@ ch_list_all <- function(endpoint = NULL,
   match.arg(endpoint, choices = c("categories", "epic-workflow", "epics", 
             "files", "labels", "linked-files", "members",
             "milestones", "projects", "repositories", "stories",
-            "teams", "workflows"))
+            "teams", "workflows", "iterations"))
   match.arg(response_type, choices = c("full", "minimal"))
   if(is.null(endpoint) & is.null(url)) stop("Please specify one of url or endpoint")
   if(!is.null(endpoint) & !is.null(url)) stop("Please specify only one of full url or endpoint")
@@ -61,7 +61,7 @@ ch_list_all <- function(endpoint = NULL,
 #' @param url Clubhouse API url.  Defaults to API V2
 #' @param endpoint  data to list. One of "categories",  "epics", 
 #' "files", "labels", "linked-files",  "milestones", "projects", "repositories",
-#' "teams"
+#' "teams",  "iterations"
 #' @param id the id for the record you want to retrieve
 #' @param config additional configuration to add to header
 #' @param ch_token Clubhouse API token. 
@@ -88,7 +88,7 @@ ch_get_one <- function( id,
   match.arg(endpoint, choices = c("categories","epics", 
                                   "files", "labels", "linked-files", 
                                   "milestones", "projects", "repositories", "stories",
-                                  "story-links", "teams"))
+                                  "story-links", "teams","iterations"))
   
   if(is.null(endpoint) & is.null(url)) stop("Please specify one of url or endpoint")
   if(!is.null(endpoint) & !is.null(url)) stop("Please specify only one of full url or endpoint")

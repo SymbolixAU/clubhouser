@@ -12,7 +12,7 @@ ch_get_one(id, endpoint = NULL, url = NULL, config = list(),
 
 \item{endpoint}{data to list. One of "categories",  "epics",
 "files", "labels", "linked-files",  "milestones", "projects", "repositories",
-"teams"}
+"teams",  "iterations"}
 
 \item{url}{Clubhouse API url.  Defaults to API V2}
 
