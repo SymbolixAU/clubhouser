@@ -3,7 +3,7 @@
 #' @param url Clubhouse API url.  Defaults to API V2
 #' @param endpoint  data to list. One of "categories", "epic-workflow", "epics", 
 #' "files", "labels", "linked-files", "members", "milestones", "projects", 
-#' "repositories", "stories",  "teams", "workflows", "iterations"
+#' "repositories", "teams", "workflows", "iterations"
 #' @param config additional configuration to add to header
 #' @param ch_token Clubhouse API token. 
 #' @param response_type either "full" (all data) or "minimal" (just "entity_type", "id", 
@@ -30,7 +30,7 @@ ch_list_all <- function(endpoint = NULL,
   
   match.arg(endpoint, choices = c("categories", "epic-workflow", "epics", 
             "files", "labels", "linked-files", "members",
-            "milestones", "projects", "repositories", "stories",
+            "milestones", "projects", "repositories", 
             "teams", "workflows", "iterations"))
   match.arg(response_type, choices = c("full", "minimal"))
   if(is.null(endpoint) & is.null(url)) stop("Please specify one of url or endpoint")
