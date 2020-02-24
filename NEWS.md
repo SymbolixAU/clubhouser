@@ -1,3 +1,8 @@
+## v 0.2.1
+
+* Added `iterations` endpoint to `ch_get_one` and `ch_get_all`
+
+
 ## clubhouser 0.2.0
 
 * Added `ch_search_stories` for story search endpoint. 
