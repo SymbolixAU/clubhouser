@@ -4,15 +4,20 @@
 \alias{ch_get_one}
 \title{Get endpoint data for one item}
 \usage{
-ch_get_one(id, endpoint = NULL, url = NULL, config = list(),
-  ch_token = get_token())
+ch_get_one(
+  id,
+  endpoint = NULL,
+  url = NULL,
+  config = list(),
+  ch_token = get_token()
+)
 }
 \arguments{
 \item{id}{the id for the record you want to retrieve}
 
 \item{endpoint}{data to list. One of "categories",  "epics",
 "files", "labels", "linked-files",  "milestones", "projects", "repositories",
-"teams"}
+"teams", "iterations"}
 
 \item{url}{Clubhouse API url.  Defaults to API V2}
 

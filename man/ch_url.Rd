@@ -4,8 +4,13 @@
 \alias{ch_url}
 \title{Clubhouse url}
 \usage{
-ch_url(ch_base_url = get_url(), endpoint = NULL, id = NULL,
-  ch_token = get_token(), query = NULL)
+ch_url(
+  ch_base_url = get_url(),
+  endpoint = NULL,
+  id = NULL,
+  ch_token = get_token(),
+  query = NULL
+)
 }
 \arguments{
 \item{ch_base_url}{the base url. Defaults to V2 of API.}

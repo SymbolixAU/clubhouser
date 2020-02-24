@@ -4,8 +4,13 @@
 \alias{ch_search_stories}
 \title{Search stories}
 \usage{
-ch_search_stories(query, search_limit = NULL, url = NULL,
-  config = list(), ch_token = get_token())
+ch_search_stories(
+  query,
+  search_limit = NULL,
+  url = NULL,
+  config = list(),
+  ch_token = get_token()
+)
 }
 \arguments{
 \item{query}{Search query.  See https://help.clubhouse.io/hc/en-us/articles/115005967026 for more detail on allowed search structure.}
