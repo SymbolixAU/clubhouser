@@ -1,7 +1,10 @@
+## v 0.2.2
+
+* removed stories from options for `ch_get_all`
+
 ## v 0.2.1
 
 * Added `iterations` endpoint to `ch_get_one` and `ch_get_all`
-
 
 ## clubhouser 0.2.0
 

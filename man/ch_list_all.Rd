@@ -15,7 +15,7 @@ ch_list_all(
 \arguments{
 \item{endpoint}{data to list. One of "categories", "epic-workflow", "epics",
 "files", "labels", "linked-files", "members", "milestones", "projects",
-"repositories", "stories",  "teams", "workflows", "iterations"}
+"repositories", "teams", "workflows", "iterations"}
 
 \item{url}{Clubhouse API url.  Defaults to API V2}
 
