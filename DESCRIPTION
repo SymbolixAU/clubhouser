@@ -1,13 +1,8 @@
 Package: clubhouser
 Type: Package
 Title: API wrappers for clubhouse.io
-Description: A longer statement about what this does. It must have at least one
-    complete sentence, and it may not begin with the name of the package or
-    "This package". Any URL must be enclosed in angle brackets. Any R packages
-    or other software you reference must be in single quotes. 'R CMD check'
-    may not report on these, but see  <https://cran.r-project.org/doc/manuals/r-release/R-exts.html#The-DESCRIPTION-file>.
-    Failure to obey may result in CRAN rejecting your package submission.
-Version: 0.2.2
+Description: <clubhouse.io> is an online project management tool.  This package provides a set of wrappers for the clubhouse API to help people build reports and manage their projects from R.
+Version: 0.3.0
 Authors@R: person("Elizabeth", "Stark", role=c("aut", "cre"), email="estark@symbolix.com.au")
 URL: https://github.com/SymbolixAU/clubhouser
 BugReports: https://github.com/SymbolixAU/clubhouser/issues
@@ -24,7 +19,7 @@ Suggests:
     knitr,
     testthat,
     spelling
-RoxygenNote: 7.0.2
+RoxygenNote: 7.1.1
 Roxygen: list(markdown = TRUE)
 VignetteBuilder: knitr
 Language: en-US
