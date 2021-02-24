@@ -5,7 +5,7 @@
   if(is.null(getOption("clubhouser"))) {
     
     options <- list(
-      ch_base_url="https://api.clubhouse.io/api/v2",
+      ch_base_url="https://api.clubhouse.io/api/v3",
       ch_token=NA_character_
     )
     attr(options, "class") <- "clubhouse_api"

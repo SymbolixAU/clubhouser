@@ -1,6 +1,8 @@
 ---
 title: "clubhouser"
 output: github_document
+editor_options: 
+  chunk_output_type: console
 ---
 
 [![Build Status](https://travis-ci.org/SymbolixAU/clubhouser.png?branch=master)](https://travis-ci.org/SymbolixAU/clubhouser)  [![codecov](https://codecov.io/gh/SymbolixAU/clubhouser/branch/master/graph/badge.svg)](https://codecov.io/gh/SymbolixAU/clubhouser)
