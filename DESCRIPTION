@@ -12,13 +12,14 @@ Depends:
 Imports:
     httr,
     utils,
-    jsonlite
+    jsonify
 Suggests:
     covr,
     httptest,
     knitr,
     testthat,
-    spelling
+    spelling,
+    rmarkdown
 RoxygenNote: 7.1.1
 Roxygen: list(markdown = TRUE)
 VignetteBuilder: knitr

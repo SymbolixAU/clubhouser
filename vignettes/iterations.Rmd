@@ -1,0 +1,91 @@
+---
+title: "Iterations"
+output: 
+  rmarkdown::html_document:
+    toc: true
+    toc_float: true
+    number_sections: false
+    theme: flatly
+vignette: >
+  %\VignetteIndexEntry{Iterations}
+  %\VignetteEncoding{UTF-8}
+  %\VignetteEngine{knitr::rmarkdown}
+editor_options: 
+  chunk_output_type: console
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  eval = FALSE
+)
+```
+
+```{r setup}
+library(clubhouser)
+library(glue)
+```
+ 
+An Iteration is a defined, time-boxed period of development for a collection of Stories. In Clubhouse, Iterations can span multiple Epics, Projects, and Workflows. (reference: https://help.clubhouse.io/hc/en-us/articles/360028953452-Iterations-Overview)
+
+Iterations are the bread and butter of teams working in sprints.
+
+`{clubhouser}` contains functions to:
+
+* `create_iterations` 
+
+(more to come)
+
+## Create iterations
+
+To create an iteration you must specify at least the name, start date and end date.  The description and UUIDs of followers are optional.
+
+Note that markdown formatting will be rendered nicely in the clubhouse app. Which is nice.
+
+```{r}
+create_iteration(
+   name = "demo iteration"
+   , start_date = "2021-06-01"
+   , end_date = "2021-06-30"
+   , description = paste0( "# markdown H1 Title \n\n",
+                           "This is a description. \n\n ",
+                           "THis is a second paragraph."
+   )
+)
+
+```
+
+To create a quarter full of iterations you just need to iterate....the iterations ....I'll see myself out.
+
+```{r}
+
+it <- seq(0, 84, 14)  # a bit over 90 days worth of two week sprints
+
+first_monday <- as.Date("2021-04-12")  # start on a monday
+
+df_dates <- data.frame(
+  starts = first_monday + it[1:length(it)-1],
+  ends = first_monday + it[2:length(it)] - 1
+)
+
+df_dates[, "name"] <- paste( format(df_dates$starts, "%a %d %b"), 
+                             "-",
+                             format(df_dates$ends, "%a %d %b %Y") )
+
+
+for( i in seq_len( nrow(df_dates) ) ){
+  
+  create_iteration(
+   name = df_dates[i, "name"]
+   , start_date = as.character( df_dates[i, "starts"] )
+   , end_date = as.character( df_dates[i, "ends"] )
+   )
+}
+
+```
+
+
+
+
+

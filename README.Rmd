@@ -1,6 +1,6 @@
 ---
 title: "clubhouser"
-output: github_document
+output: gfm
 editor_options: 
   chunk_output_type: console
 ---
@@ -26,6 +26,9 @@ library(httptest)
 start_vignette("./")
 
 ```
+
+
+# clubhouser <img src='man/figures/logo.jpg' align="right" height="72" />
 
 A simple API wrapper library for accessing the [https://clubhouse.io/](https://clubhouse.io/) API. 
 

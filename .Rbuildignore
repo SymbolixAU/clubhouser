@@ -2,3 +2,7 @@
 ^\.Rproj\.user$
 ^\.travis\.yml$
 README.Rmd
+^R/scratch\.R$
+^_pkgdown\.yml$
+^docs$
+^pkgdown$

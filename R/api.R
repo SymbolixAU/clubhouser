@@ -14,9 +14,9 @@ ch_api <- function (verb,
 
   FUN <- get(verb, envir=asNamespace("httr"))
   resp <- FUN(url, ..., config=c(ch_config(), config))
-  
+
   #check for errors
-  if (resp$status_code >= 201L)  {  # error
+  if (resp$status_code > 201L)  {  # error
     msg <- httr::http_status(resp)$message
     stop(msg, call.=FALSE)
   } else { # return response
@@ -73,7 +73,7 @@ ch_url <- function (ch_base_url = get_url(),
 
 
 
-#' @importFrom jsonlite fromJSON
+#' @import jsonify
 #' @importFrom httr content
 ch_GET <- function (url, 
                     config=list(),  ...) {
@@ -82,7 +82,7 @@ ch_GET <- function (url,
 
   if(length(resp) == 0) warning(
     "Empty list returned. Do you have data at this endpoint?")
-  return( jsonlite::fromJSON( httr::content(resp
+  return( jsonify::from_json( httr::content(resp
                                             , as = "text"
                                             , encoding = "ISO-8859-1") ) )
   
