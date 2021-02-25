@@ -2,7 +2,7 @@ Package: clubhouser
 Type: Package
 Title: API wrappers for clubhouse.io
 Description: <clubhouse.io> is an online project management tool.  This package provides a set of wrappers for the clubhouse API to help people build reports and manage their projects from R.
-Version: 0.3.0
+Version: 0.3.0.9000
 Authors@R: person("Elizabeth", "Stark", role=c("aut", "cre"), email="estark@symbolix.com.au")
 URL: https://github.com/SymbolixAU/clubhouser
 BugReports: https://github.com/SymbolixAU/clubhouser/issues
