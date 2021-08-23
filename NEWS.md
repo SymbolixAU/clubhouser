@@ -1,3 +1,5 @@
+# clubhouser 0.4.0
+
 # clubhouser 0.3.0
 
 * Changed default api version to V3
